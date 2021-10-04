@@ -23,6 +23,7 @@ html{
   font-size: 1rem;
   text-align: center;
   border: border 5px solid black;
+  height: 10vh
 }
 .ok:hover{
   background: brown;
@@ -31,6 +32,7 @@ html{
 #playpause{
   background: indigo;
   text-align: center;
+  height: 10vh;
 }
 .yes:hover{
   background: darkred;
