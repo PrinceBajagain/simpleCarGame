@@ -15,21 +15,26 @@
 .display{
   display: none;
 }
-
+html{
+  overflow: hidden;
+}
 .ok{
+  color: white;
   background: red;
-  font-size: 2vh;
+  font-size: 3vh;
   text-align: center;
   border: border 5px solid black;
-  height: 10vh
+  height: 5vh;
 }
 .ok:hover{
   background: brown;
 }
 
 #playpause{
+  color: white;
   background: indigo;
   text-align: center;
+  font-size: 3vh;
   height: 10vh;
 }
 .yes:hover{
