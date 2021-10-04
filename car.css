@@ -1,1 +1,13 @@
 
+#canvastag {
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  display: flex;
+}
+.button{
+  display: none;
+}
+.display{
+  display: none;
+}
