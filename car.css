@@ -1,7 +1,11 @@
 
+*{
+  margin: 0;
+  padding: 0;
+}
 #canvastag {
   width: 100vw;
-  height: 50vh;
+  height: 70vh;
   border: 2px solid black;
   display: flex;
 }
@@ -10,4 +14,24 @@
 }
 .display{
   display: none;
+}
+html{
+  overflow: hidden;
+}
+.ok{
+  background: red;
+  font-size: 1rem;
+  text-align: center;
+  border: border 5px solid black;
+}
+.ok:hover{
+  background: brown;
+}
+
+#playpause{
+  background: indigo;
+  text-align: center;
+}
+.yes:hover{
+  background: darkred;
 }
