@@ -17,9 +17,6 @@
 .display{
   display: none;
 }
-html{
-  overflow: hidden;
-}
 .ok{
   color: white;
   background: red;
