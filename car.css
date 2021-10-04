@@ -20,7 +20,7 @@ html{
 }
 .ok{
   background: red;
-  font-size: 1rem;
+  font-size: 2vh;
   text-align: center;
   border: border 5px solid black;
   height: 10vh
