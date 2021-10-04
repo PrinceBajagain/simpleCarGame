@@ -1,6 +1,6 @@
 
 #canvastag {
-  width: 100vh;
+  width: 100vw;
   height: 50vh;
   border: 2px solid black;
   display: flex;
