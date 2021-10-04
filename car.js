@@ -65,30 +65,15 @@ function drawroad(){
      state.enemyposition[1][1]=0;
      
    }
+   
    drawenemy();
    drawplayer();
-   if ((state.x < state.enemyposition[0][0] +20 &&
-       state.x + 20 > state.enemyposition[0][0] &&
-       state.y < state.enemyposition[0][1] + 20 &&
-       state.y + 20 > state.enemyposition[0][1])||( state.x < state.enemyposition[1][0] + 20 &&
-           state.x + 20 > state.enemyposition[1][0] &&
-           state.y < state.enemyposition[1][1] + 20 &&
-           state.y + 20 > state.enemyposition[1][1] )) {
-      document.getElementById('btn').classList.add('display');
-      cancelAnimationFrame(gameloop);
-      document.getElementById('mybtn').classList.remove('button');
-      document.getElementById('pause').classList.add('display');
-      document.getElementById('play').classList.add('display')
-   }else
-   {
-     document.getElementById('btn').classList.remove('display');
-     document.getElementById('pause').classList.remove('display');
-     document.getElementById('play').classList.remove('display')
-     requestAnimationFrame(gameloop);
-   }
-   if(paused){
+   if (paused) {
      paused();
+   }else{
+     play();
    }
+   
 }
 gameloop();
 setInterval(road,50);
@@ -110,10 +95,29 @@ function restart(){
    state = {enemyposition: [[30,0],[250,0]],x: 30,y: 130}
 }
 function play(){
-  gameloop();
   paused=false;
+  if ((state.x < state.enemyposition[0][0] + 20 &&
+      state.x + 20 > state.enemyposition[0][0] &&
+      state.y < state.enemyposition[0][1] + 20 &&
+      state.y + 20 > state.enemyposition[0][1]) || (state.x < state.enemyposition[1][0] + 20 &&
+      state.x + 20 > state.enemyposition[1][0] &&
+      state.y < state.enemyposition[1][1] + 20 &&
+      state.y + 20 > state.enemyposition[1][1])) {
+    document.getElementById('btn').classList.add('display');
+    cancelAnimationFrame(gameloop);
+    document.getElementById('mybtn').classList.remove('button');
+    document.getElementById('pause').classList.add('display');
+    document.getElementById('play').classList.add('display')
+  } else
+  {
+    document.getElementById('btn').classList.remove('display');
+    document.getElementById('pause').classList.remove('display');
+    document.getElementById('play').classList.remove('display')
+    requestAnimationFrame(gameloop);
+  }
 }
 function pause() {
-  cancelAnimationFrame(gameloop);
   paused=true;
+  cancelAnimationFrame(gameloop);
+  document.getElementById('btn').classList.add('display');
 }
